@@ -1,40 +1,150 @@
 @import "settings";
 @import "foundation";
+@import "foundation-icons";
 
-// Or selectively include components
-// @import
-//   "foundation/components/accordion",
-//   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
-//   "foundation/components/breadcrumbs",
-//   "foundation/components/button-groups",
-//   "foundation/components/buttons",
-//   "foundation/components/clearing",
-//   "foundation/components/dropdown",
-//   "foundation/components/dropdown-buttons",
-//   "foundation/components/flex-video",
-//   "foundation/components/forms",
-//   "foundation/components/grid",
-//   "foundation/components/inline-lists",
-//   "foundation/components/joyride",
-//   "foundation/components/keystrokes",
-//   "foundation/components/labels",
-//   "foundation/components/magellan",
-//   "foundation/components/orbit",
-//   "foundation/components/pagination",
-//   "foundation/components/panels",
-//   "foundation/components/pricing-tables",
-//   "foundation/components/progress-bars",
-//   "foundation/components/reveal",
-//   "foundation/components/side-nav",
-//   "foundation/components/split-buttons",
-//   "foundation/components/sub-nav",
-//   "foundation/components/switch",
-//   "foundation/components/tables",
-//   "foundation/components/tabs",
-//   "foundation/components/thumbs",
-//   "foundation/components/tooltips",
-//   "foundation/components/top-bar",
-//   "foundation/components/type",
-//   "foundation/components/offcanvas",
-//   "foundation/components/visibility";
+
+
+$background-h: #6c943f;
+$colortext-h: #cdcdcd;
+$background-f: #fef581;
+$colortext-f: #976da5;
+$colr-ic: white;
+$color-ic-hov: yellow;
+$navi :#2c3140;
+$navi-hov: purple;
+$navi-h: #cdcdcd;
+$background-large:#af7777;
+
+header{
+  
+  .panel{
+    background-color: $background-h;	
+	height: 15em;
+
+	  h1{
+	    color: $colortext-h;	
+	    font-weight: bold;
+        font-size: 3rem;    
+      }
+
+      /*sur ecrans tablette et pc*/
+
+      @media only screen and (min-width: 40.063em){
+      	background-color: #af7777;
+
+      }
+
+
+
+  }	
+}
+
+footer{
+
+  .panel{
+	background-color: $background-f;	
+
+	  h1{
+		color:$colortext-f;	
+        font-weight: bold;
+        font-size: 4.3rem;
+        padding:65px 0 20px 0;
+
+	  }
+  }
+}
+
+/*----------------icone---------------------------------*/
+/* taille de  l'icone  */ 
+.size-48 {
+	color:$colr-ic;
+    font-size: 48px;
+    margin: 25%;
+}
+/*au survol */
+.size-48:hover{
+   color:$color-ic-hov;
+}
+
+/*----------------menu tabltte et gds ecrans---------------------------------*/
+
+#hidden-navi{
+    display: none;
+	float:left;
+	background:$navi;
+	width:220px;
+	height: 1145px;
+	margin:0px;
+	padding:50px;
+	padding-top:30px;
+    position  :absolute;
+    left:-30px;
+    top:1px;
+    overflow:hidden;
+    z-index: 9999999999;
+
+    ul li {
+	padding-bottom:8px;
+
+	  a {
+	  color:$navi-h;	
+      }
+
+      a:hover {
+	  color:$navi-hov;	
+      }
+
+    }
+	
+}
+
+
+/*----------------menu mobile---------------------------------*/
+
+/*  menu m  */
+#push-mobile{	
+	background:$navi;
+	height: 1560px;
+	float:left;
+	display: none;
+	padding: 5px 35px;
+	border-right: none;
+    z-index: 99999;
+
+    ul li a {
+	color:$navi-h;	
+	  a:hover {
+	  color:$navi-hov;	
+      }
+
+      h1{
+	  color:$navi-h;
+      }
+    }
+
+    /*sur ecrans tablette et pc*/
+
+    @media only screen and (min-width: 40.063em){
+
+    	display:none;    	
+     }
+
+
+}
+
+.button-navi-m {
+	position:relative;
+	top:-20px;
+	left:-20px;
+	width:60px;
+	background:$navi;
+}
+
+/*sur ecrans mobile*/
+#push-content{
+     @media only screen and (max-width: 40em) { 
+       position: absolute;
+	   float:left;
+     }
+
+}
